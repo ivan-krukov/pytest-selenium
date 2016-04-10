@@ -1,14 +1,12 @@
-import pytest  # noslide
-from selenium.webdriver import Firefox  # noslide
+import pytest
+from selenium.webdriver import Firefox
 
-@pytest.fixture(scope='session')
-def driver(request):
+@pytest.fixture
+def driver():
     return Firefox()
 #!
 def test_github_search(driver):
-#!
     driver.get('https://github.com')
-#!
     search_box = driver.find_element_by_name('q')
     search_box.send_keys('txtorcon')
     search_box.submit()
