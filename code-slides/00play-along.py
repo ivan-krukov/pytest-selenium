@@ -4,9 +4,11 @@
 ##   <li><tt>cd pyyc-pytest-selenium</tt></li>
 ##   <li><tt>virtualenv venv</tt></li>
 ##   <li><tt>source venv/bin/activate</tt></li>
-##   <li><tt>pip install --editable .</tt></li>
+##   <li><tt>pip install -r project/requirements.txt</tt></li>
 ## </ul>
-## <p>Confirm you have both Firefox and Chrome installed. Confirm that <tt>chromedriver</tt> is in your <tt>PATH</tt> (<tt>which chromedriver</tt> will tell you if so).</p>
+## <p>Confirm you have both Firefox and Chrome installed. Confirm that <tt>chromedriver</tt> is in your <tt>PATH</tt> (typing <tt>which chromedriver</tt> in a Terminal will tell you if so).</p>
 ## <ul>
 ##   <li><tt>http://chromedriver.storage.googleapis.com</tt></li>
+##   <li><tt>google.com/chrome</tt></li>
+##   <li><tt>getfirefox.com</tt></li>
 ## </ul>
