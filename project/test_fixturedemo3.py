@@ -34,7 +34,7 @@ def page(request, driver):
     old_url = driver.current_url
     url = request.param
     if 'torproject' in url and isinstance(driver, Chrome):
-        pytest.skip("no Tor in Chrome")
+        pytest.skip("not visiting '{}' in Chrome".format(url))
     request.addfinalizer(lambda: driver.get(old_url))
     driver.get(url)
     return url
