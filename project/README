@@ -4,3 +4,12 @@ Selenium with py.test
 Selenium: http://docs.seleniumhq.org/projects/webdriver/
  py.test: http://pytest.org/latest/
 
+Some things to try:
+
+py.test -s -v test_fixturedemo0.py
+
+Other things:
+
+py.test -h
+py.test --fixtures
+py.test --markers
