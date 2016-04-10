@@ -1,0 +1,6 @@
+This is a demonstration project for a PyYYC presentation on using
+Selenium with py.test
+
+Selenium: http://docs.seleniumhq.org/projects/webdriver/
+ py.test: http://pytest.org/latest/
+
