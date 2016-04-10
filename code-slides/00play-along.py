@@ -1,7 +1,7 @@
 ## <p>If you want to play along with the demos, do this:</p>
 ## <ul>
-##   <li><tt>git clone https://thula.meejah.ca/pyyyc-pytest-selenium</tt></li>
-##   <li><tt>cd pyyc-pytest-selenium</tt></li>
+##   <li><tt>git clone https://github.com/py-yyc/pytest-selenium</tt></li>
+##   <li><tt>cd pytest-selenium</tt></li>
 ##   <li><tt>virtualenv venv</tt></li>
 ##   <li><tt>source venv/bin/activate</tt></li>
 ##   <li><tt>pip install -r project/requirements.txt</tt></li>
