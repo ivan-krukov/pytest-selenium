@@ -7,6 +7,12 @@
    http://www.w3.org/Consortium/Legal/copyright-documents
    http://www.w3.org/Consortium/Legal/copyright-software
 */
+
+strike
+{
+    color: #dc322f;
+}
+
 body
 {
   margin: 0 0 0 0;
