@@ -1,3 +1,4 @@
+from time import sleep
 import pytest
 from selenium.webdriver import Firefox
 from selenium.webdriver.common.action_chains import ActionChains
@@ -57,10 +58,6 @@ def test_github_project(driver):
         .send_keys_to_element(finder, Keys.ENTER) \
         .perform()
 
-    # XXX FIXME
-    import time
-    time.sleep(5)
-
     # ...which we confirm because this "should" have loaded the Dockerfile
-    assert 'Dockerfile' in driver.title
-    time.sleep(5)
+    WebDriverWait(driver, 5.0).until(EC.title_contains('Dockerfile'))
+    sleep(5)  # keep browser alive a little for the demo

@@ -38,3 +38,7 @@ def page(request, driver):
 def test_visit_page(page):
     print("visited", page)
     sleep(2)
+
+
+def test_something_else(driver):
+    pass
