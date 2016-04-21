@@ -4,12 +4,37 @@ Selenium with py.test
 Selenium: http://docs.seleniumhq.org/projects/webdriver/
  py.test: http://pytest.org/latest/
 
-Some things to try:
+setup
+-----
+
+- create a virtualenv: ``virtualenv venv``
+- activate it: ``source ./venv/bin/activate``
+- install things: ``pip install -r requirements.txt``
+
+If it worked you should be able to type ``py.test --help`` and see
+something useful.
+
+
+browser setup
+-------------
+
+You should have reasonably new Firefox and Chrome installed, and also
+install "chromedriver" (http://chromedriver.storage.googleapis.com) if
+you wish to see Selenium drive both Firefox **and** Chrome.
+
+
+
+run some tests
+--------------
+
+py.test test_github.py
+
+
+other things to try
+-------------------
 
 py.test -s -v test_fixturedemo0.py
-
-Other things:
-
 py.test -h
 py.test --fixtures
 py.test --markers
+
