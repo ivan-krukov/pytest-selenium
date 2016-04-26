@@ -19,9 +19,10 @@ browser setup
 -------------
 
 You should have reasonably new Firefox and Chrome installed, and also
-install "chromedriver" (http://chromedriver.storage.googleapis.com) if
-you wish to see Selenium drive both Firefox **and** Chrome.
+install "chromedriver" if you wish to see Selenium drive both Firefox
+**and** Chrome. See::
 
+   https://sites.google.com/a/chromium.org/chromedriver/downloads
 
 
 run some tests
