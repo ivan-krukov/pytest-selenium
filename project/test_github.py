@@ -10,9 +10,13 @@ from selenium.webdriver.support.ui import WebDriverWait
 
 @pytest.fixture(scope='session')
 def driver(request):
-    driver = Firefox()
-    request.addfinalizer(lambda: driver.quit())
-    return driver
+    ff = Firefox()
+
+    def cleanup():
+        sleep(2)  # for demo purposes
+        ff.quit()
+    request.addfinalizer(cleanup)  # or: request.addfinalizer(driver.quit)
+    return ff
 
 
 def test_github_search(driver):
@@ -26,7 +30,6 @@ def test_github_search(driver):
         driver.find_elements_by_class_name('repo-list-name')
     ]
 
-    assert len(found_repos) >= 1
     assert 'meejah/txtorcon' in found_repos
 
 
@@ -44,7 +47,7 @@ def test_github_project(driver):
 
     # wait up to 5 seconds until it's "actually" activated (which we
     # know because an element with a particular ID will be visible)
-    finder = WebDriverWait(driver, 5.0).until(
+    finder = WebDriverWait(driver, timeout=5.0).until(
         EC.presence_of_element_located(
             (By.ID, "tree-finder-field")
         )
@@ -60,4 +63,3 @@ def test_github_project(driver):
 
     # ...which we confirm because this "should" have loaded the Dockerfile
     WebDriverWait(driver, 5.0).until(EC.title_contains('Dockerfile'))
-    sleep(5)  # keep browser alive a little for the demo

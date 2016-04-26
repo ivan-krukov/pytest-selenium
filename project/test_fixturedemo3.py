@@ -24,12 +24,7 @@ def driver(request):
     return driver
 
 
-@pytest.fixture(
-    params=[
-        'https://torproject.org',
-        'https://meejah.ca/projects',
-    ]
-)
+@pytest.fixture(params=['https://torproject.org', 'https://meejah.ca/projects'])
 def page(request, driver):
     old_url = driver.current_url
     url = request.param

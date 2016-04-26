@@ -21,11 +21,12 @@ body
   height: 100%;
   color: #839496;
   background-color: #073642 !important;
+  background-color: #fdf6e3 !important;
   font-family: "Gill Sans MT", "Gill Sans", GillSans, sans-serif;
   font-size: 14pt;
 }
 
-html { background-color: #073642; }
+html { background-color: #073642;   background-color: #fdf6e3; !important;}
 
 div.toolbar {
   position: fixed; z-index: 200;

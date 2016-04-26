@@ -15,5 +15,4 @@ found_repos = driver.find_elements_by_class_name(
 #!
 repo_names = [div.text for div in found_repos]
 #!
-assert len(found_repos) >= 1
 assert 'meejah/txtorcon' in repo_names

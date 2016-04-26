@@ -1,7 +1,9 @@
 import pytest
 from selenium.webdriver import Firefox
 
+#!
 @pytest.fixture
+#!
 def driver():
     return Firefox()
 #!
@@ -16,8 +18,4 @@ def test_github_search(driver):
         driver.find_elements_by_class_name('repo-list-name')
     ]
 #!
-    assert len(found_repos) >= 1
     assert 'meejah/txtorcon' in found_repos
-
-
-

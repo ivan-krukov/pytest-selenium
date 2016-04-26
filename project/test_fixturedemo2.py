@@ -5,10 +5,7 @@ from selenium.webdriver import Firefox, Chrome
 import pytest
 
 
-@pytest.fixture(
-    scope='session',
-    params=['firefox', 'chrome'],
-)
+@pytest.fixture(scope='session', params=['firefox', 'chrome'])
 def driver(request):
     browser = request.param
     if browser == 'firefox':
@@ -21,12 +18,7 @@ def driver(request):
     return driver
 
 
-@pytest.fixture(
-    params=[
-        'https://torproject.org',
-        'https://meejah.ca/projects',
-    ]
-)
+@pytest.fixture(params=['https://torproject.org', 'https://meejah.ca/projects'])
 def page(request, driver):
     old_url = driver.current_url
     url = request.param
